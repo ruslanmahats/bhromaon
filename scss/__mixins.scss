@@ -1,0 +1,142 @@
+@use "_variables" as *;
+
+@mixin rwd {
+	@media (max-width: $w-small) {
+		@content;
+	}
+}
+@mixin phone {
+	@media (min-width: $w-phone) {
+		@content;
+	}
+}
+@mixin tablet-p {
+	@media (min-width: $w-tablet-p) {
+		@content;
+	}
+}
+@mixin tablet-l {
+	@media (min-width: $w-tablet-l) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: $w-desktop) {
+		@content;
+	}
+}
+@mixin desktop-big {
+	@media (min-width: $w-desktop-big) {
+		@content;
+	}
+}
+
+@mixin font($ff: $ff-two, $fw: normal, $fz: $fz-base, $lh: 1, $tt: none, $ls: normal, $col) {
+	font-family: $ff;
+	font-weight: $fw;
+	font-size: $fz;
+	line-height: $lh;
+	text-transform: $tt;
+	letter-spacing: $ls;
+	color: $col;
+}
+
+@mixin font-h1($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 52px;
+	letter-spacing: normal;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-h2($tt: null, $col: null) {
+	font-family: $ff-two;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 40px;
+	letter-spacing: normal;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-h3($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-h4($tt: null, $col: null) {
+	font-family: $ff-two;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.1em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-h5($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: normal;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-h6($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-subheading($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 28px;
+	letter-spacing: 0.31em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-body1($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.2em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-body2($tt: null, $col: null) {
+	font-family: $ff-base;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0.1em;
+	text-transform: $tt;
+	color: $col;
+}
+
+@mixin font-btn($tt: null, $col: null) {
+	font-family: $ff-two;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.07em;
+	text-transform: $tt;
+	color: $col;
+}

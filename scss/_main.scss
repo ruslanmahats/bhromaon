@@ -1,0 +1,336 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+//* WHY SECTION =======================================================================
+
+.why {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("../assets/images/backgrounds/bg-why.jpg");
+	padding: 60px 0;
+	@include tablet-l {
+		padding: 124px 0;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		gap: 37px;
+		@include tablet-p {
+			gap: 32px;
+		}
+		@include tablet-l {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 24px;
+		}
+		@include desktop {
+			justify-content: start;
+			gap: 122px;
+		}
+		@include desktop-big {
+			gap: 136px;
+		}
+	}
+	&__text {
+		text-align: center;
+		width: 100%;
+		@include tablet-l {
+			text-align: left;
+			max-width: 648px;
+		}
+	}
+	&__button {
+		margin-top: 24px;
+		@include tablet-l {
+			margin-top: 32px;
+		}
+	}
+	&__photos {
+		width: 100%;
+		display: flex;
+		gap: 24px;
+		justify-content: space-between;
+		@include tablet-l {
+			display: block;
+			width: auto;
+		}
+	}
+	&__photo-container {
+		width: 100%;
+		max-height: 162px;
+		@include tablet-p {
+			max-height: 219px;
+		}
+		@include tablet-l {
+			width: 350px;
+			height: 220px;
+			max-height: fit-content;
+		}
+		&:nth-of-type(2) {
+			@include tablet-l {
+				margin-left: 36px;
+				margin-top: 16px;
+			}
+			@include desktop {
+				margin-left: 110px;
+			}
+			@include desktop-big {
+				margin-left: 74px;
+			}
+		}
+	}
+	&__photo {
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		height: 100%;
+		@include tablet-l {
+			&:hover {
+				transform: scale(1.3);
+				transition: all 0.3s ease-in;
+			}
+		}
+	}
+	& p {
+		margin-top: 19px;
+		@include tablet-p {
+			margin-top: 24px;
+		}
+	}
+	& p + p {
+		margin-top: 32px;
+	}
+}
+
+//* STEPS SECTION =======================================================================
+
+.select {
+	background-color: $col-bg-feedback;
+	padding: 60px 0;
+	@include tablet-l {
+		height: 306px;
+	}
+	&__lines {
+		display: none;
+		margin: 0 auto;
+		background-image: url("../assets/icons/line.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		@include tablet-l {
+			display: block;
+			height: 57px;
+			width: 75%;
+		}
+		@include desktop {
+			height: 69px;
+		}
+		@include desktop-big {
+			height: 90px;
+		}
+	}
+}
+.steps {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 59px;
+	@include tablet-l {
+		flex-direction: row;
+		margin-top: -22px;
+		gap: 0;
+	}
+	@include desktop {
+		gap: 24px;
+		margin-top: -28px;
+	}
+	@include desktop-big {
+		margin-top: -43px;
+	}
+	&__item {
+		text-align: center;
+		&:hover {
+			transform: scale(1.2);
+			transition: all 0.3s ease-in;
+		}
+		@include tablet-l {
+			width: 320px;
+		}
+		@include desktop {
+			width: 364px;
+		}
+		@include desktop-big {
+			width: 424px;
+		}
+	}
+	&__icon-box {
+		display: inline-block;
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		background-color: $col-bg-feedback;
+		position: relative;
+		&--search {
+			fill: $col-icons-bg-hov;
+		}
+		&--select {
+			fill: $col-icons-bg-sel;
+		}
+		&--thumbs {
+			fill: $col-icons-bg-enj;
+		}
+	}
+	&__icon-box svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: inline-block;
+		width: 64px;
+		height: 64px;
+	}
+	&__text {
+		margin-top: 4px;
+	}
+}
+
+//* BOOKING SECTION =======================================================================
+
+.booking {
+	padding: 120px 0 120px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include tablet-l {
+		padding: 220px 0 120px;
+	}
+	&--first {
+		background-image: url("../assets/images/backgrounds/bg-appart.jpg");
+	}
+	&--second {
+		background-image: url("../assets/images/backgrounds/bg-rock.jpg");
+	}
+	&__card {
+		margin-right: auto;
+		margin-left: 0;
+		padding: 44px 32px;
+		background-color: $col-bg-booking;
+		@include tablet-l {
+			max-width: 57.3%;
+		}
+		@include desktop {
+			max-width: calc(50% - 12px);
+		}
+	}
+	&--second &__card {
+		margin-right: 0;
+		margin-left: auto;
+	}
+	&__button {
+		margin-top: 28px;
+		display: inline-block;
+		background-color: $col-bg-2;
+		@include tablet-p {
+			margin-top: 24px;
+		}
+	}
+	& h5 {
+		margin-top: 16px;
+	}
+	& p {
+		margin-top: 16px;
+	}
+}
+
+// * FEEDBACK SECTION================================================================================================
+
+.feedbacks {
+	padding: 60px 0 120px;
+	background-image: url("../assets/images/backgrounds/bg-why.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include tablet-l {
+		padding: 120px 0 180px;
+	}
+	&__title {
+		text-align: center;
+		vertical-align: top;
+	}
+	&__container {
+		margin-top: 60px;
+	}
+}
+.feedback {
+	display: flex;
+	flex-direction: column;
+	@include tablet-l {
+		flex-direction: row;
+		min-height: 336px;
+	}
+	@include desktop {
+		min-height: 308px;
+	}
+	@include desktop-big {
+		min-height: 280px;
+	}
+	&__picture-container {
+		height: 336px;
+		max-height: 336px;
+		width: 100%;
+		@include tablet-p {
+		}
+		@include tablet-l {
+			height: auto;
+			max-height: fit-content;
+			max-width: 380px;
+			min-height: 100%;
+		}
+		@include desktop {
+			max-width: 380px;
+		}
+		@include desktop-big {
+			max-width: 440px;
+		}
+	}
+	&__picture {
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		height: 100%;
+	}
+	&__text-container {
+		background-color: $col-bg-feedback;
+		padding: 48px 30px;
+		width: 100%;
+		@include phone {
+			padding: 48px 60px;
+		}
+	}
+	&__title {
+		vertical-align: top;
+	}
+	&__text {
+		margin-top: 16px;
+		&:first-of-type {
+			text-indent: 32px;
+			position: relative;
+		}
+		&:first-of-type::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: -5px;
+			left: 0px;
+			width: 20px;
+			height: 20px;
+			background-image: url("../assets/icons/quote-left.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
+
+// * ===========================================================================================
